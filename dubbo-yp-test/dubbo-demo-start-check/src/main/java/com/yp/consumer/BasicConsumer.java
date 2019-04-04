@@ -14,7 +14,8 @@ public class BasicConsumer {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("consumer.xml");
         context.start();
 
-        //HelloService helloService = context.getBean(HelloService.class);
+        HelloService helloService = context.getBean(HelloService.class);
+        System.out.println(helloService.sayHello("yepeng"));
         //GreetService greetService = context.getBean(GreetService.class);
 //        for (int i = 0; i < 10; i++) {
 //            String sayHello = helloService.sayHello("yepeng");
